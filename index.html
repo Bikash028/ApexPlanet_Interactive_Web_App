@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Interactive Web App</h1>
+    <nav>
+      <a href="#quiz">Quiz</a>
+      <a href="#carousel">Gallery</a>
+      <a href="#api">Joke</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="quiz">
+    <h2>🧠 Quick Quiz</h2>
+    <div class="quiz-box">
+      <div id="question">Loading question...</div>
+      <div id="answers"></div>
+      <button id="nextBtn">Next</button>
+      <div id="result"></div>
+    </div>
+  </section>
+
+  <section id="carousel">
+    <h2>📸 Image Carrousel</h2>
+    <div class="carousel">
+      <button onclick="prevImage()">⬅</button>
+      <img id="carouselImg" src="assets/images/img1.jpg" alt="Carousel" />
+      <button onclick="nextImage()">➡</button>
+    </div>
+  </section>
+
+  <section id="api">
+    <h2>😂 Random Joke Generator</h2>
+    <div class="joke-box">
+      <p id="joke">Click below to load a joke.</p>
+      <button onclick="fetchJoke()">Tell me a Joke</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>🌍 About Us</h2>
+    <p>We build fun, responsive, and interactive websites using JavaScript, HTML & CSS. Our goal is to make learning and coding more enjoyable!</p>
+  </section>
+
+  <section id="contact">
+    <h2>📧 Contact Us</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Interactive Web Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
